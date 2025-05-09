@@ -1,6 +1,6 @@
 import { db } from "@/config/firebase.config";
 import { LoaderPage } from "@/routes/loader-page";
-import { type Users } from "@/types";
+import type { User } from "@/types";
 import { useAuth, useUser } from "@clerk/clerk-react";
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
@@ -22,7 +22,7 @@ const AuthHanlder = () => {
         try {
           const userSanp = await getDoc(doc(db, "users", user.id));
           if (!userSanp.exists()) {
-            const userData: Users = {
+            const userData: User = {
               id: user.id,
               name: user.fullName || user.firstName || "Anonymous",
               email: user.primaryEmailAddress?.emailAddress || "N/A",

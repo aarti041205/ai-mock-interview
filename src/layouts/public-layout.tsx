@@ -1,5 +1,6 @@
+
+import  {Footer} from "@/components/ui/footer"
 import Header from "@/components/ui/header"
-import Footer from "@/components/ui/footer"
 import AuthHanlder from "@/handlers/auth-handlers";
 import { Outlet } from "react-router-dom"
 
@@ -16,5 +17,5 @@ export const PublicLayout = () => {
 
         <Footer />
     </div>
-  )
-}
+  );
+};

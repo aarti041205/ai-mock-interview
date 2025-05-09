@@ -1,6 +1,6 @@
 import {Container} from "@/components/container";
 import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
+import {Footer}from "@/components/ui/footer";
 import { Outlet } from "react-router-dom";
 
 

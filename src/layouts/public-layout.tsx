@@ -1,6 +1,6 @@
 
-import  {Footer} from "@/components/ui/footer"
-import Header from "@/components/ui/header"
+import  {Footer} from "@/components/footer"
+import Header from "@/components/header"
 import AuthHanlder from "@/handlers/auth-handlers";
 import { Outlet } from "react-router-dom"
 

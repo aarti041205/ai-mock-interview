@@ -11,21 +11,21 @@ const Header = () => {
   const { userId } = useAuth();
 
   return (
-    <header className={cn("w-full border-b transition-all duration-150 ease-in-out")}>
+    <header className={cn("w-full border-b bg-white transition-all duration-150 ease-in-out")}>
       <Container>
-        <div className="flex items-center w-full gap-4">
+        <div className="flex items-center w-full gap-4 py-4">
           {/* Logo Section */}
           <LogoContainer />
 
           {/* Navigation Section */}
-          <nav className="hidden md:flex items-center gap-3">
+          <nav className="hidden md:flex items-center gap-4">
             <NavigationRoutes />
             {userId && (
               <NavLink
                 to="/generate"
                 className={({ isActive }) =>
                   cn(
-                    "text-base text-neutral-600",
+                    "text-base text-neutral-600 hover:text-neutral-800 transition-colors",
                     isActive && "text-neutral-900 font-semibold"
                   )
                 }
@@ -36,7 +36,7 @@ const Header = () => {
           </nav>
 
           {/* Right Side (Profile & Mobile Toggle) */}
-          <div className="ml-auto flex items-center gap-6">
+          <div className="ml-auto flex items-center gap-4">
             <ProfileContainer />
             <ToggleContainer />
           </div>
